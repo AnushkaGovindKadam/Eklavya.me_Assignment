@@ -65,15 +65,25 @@ Generator → Reviewer → Refined Output
 
 agent-ai-assessment/
 │
+
 ├── backend.py          # Backend (Generator + Reviewer agents)
+
 │
+
 ├── templates/
+
 │   └── index.html      # Frontend UI
+
 │
+
 ├── static/
+
 │   └── style.css       # UI styling
+
 │
+
 └── README.md           # Project documentation
+
 
 🚀 How to Run the Project
 
