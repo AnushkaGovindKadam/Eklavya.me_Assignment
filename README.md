@@ -9,9 +9,9 @@ The system is built using Python (Flask) for the backend and HTML/CSS for the fr
 
 🎯 Objective
 To design and implement:
-Two AI agents with clear responsibilities
-A structured input → output pipeline
-A UI that makes the agent flow visible and easy to understand
+Two AI agents with clear responsibilities,
+A structured input → output pipeline,
+A UI that makes the agent flow visible and easy to understand.
 
 This project follows the requirements provided in the assessment PDF.
 
@@ -21,33 +21,33 @@ This project follows the requirements provided in the assessment PDF.
 Responsibility:
 Generates educational content for a given grade and topic.
 Key Constraints:
-Language matches the grade level
-Concepts are age-appropriate and correct
-Output structure is deterministic 
+Language matches the grade level,
+Concepts are age-appropriate and correct,
+Output structure is deterministic .
 
 2️⃣ Reviewer Agent
 Responsibility:
 Evaluates the Generator Agent’s output.
 Input:
-JSON output from the Generator Agent
+JSON output from the Generator Agent.
 Evaluation Criteria:
-Age appropriateness
-Conceptual correctness
-Clarity of explanation and questions
+Age appropriateness,
+Conceptual correctness,
+Clarity of explanation and questions.
 
 🔁 Refinement Logic
 If the Reviewer returns fail:
-The Generator is re-run once
-Reviewer feedback is embedded into the new generation
-Only one refinement pass is allowed (as per assessment requirements)
+The Generator is re-run once,
+Reviewer feedback is embedded into the new generation,
+Only one refinement pass is allowed (as per assessment requirements).
 
 🖥️ UI Integration
 The frontend:
-Triggers the agent pipeline
+Triggers the agent pipeline.
 Displays:
-Generator output
-Reviewer feedback
-Refined output 
+Generator output,
+Reviewer feedback,
+Refined output .
 Clearly visualizes the agent flow:
 Generator → Reviewer → Refined Output
 
