@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Agent-Based Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Agent-Based Educational Content Generator</h1>
+    <p class="flow">Generator Agent → Reviewer Agent → Refinement</p>
+
+    <form method="post" class="input-box">
+        <input type="number" name="grade" placeholder="Grade (e.g. 4)" min="1" max="12" required>
+        <input type="text" name="topic" placeholder="Topic (e.g. Photosynthesis)" required>
+        <button type="submit">Run Agent Pipeline</button>
+    </form>
+
+    {% if generator %}
+    <div class="card">
+        <h2>🧠 Generator Output</h2>
+        <pre>{{ generator }}</pre>
+    </div>
+
+    <div class="card">
+        <h2>🔍 Reviewer Feedback</h2>
+        <pre>{{ reviewer }}</pre>
+    </div>
+    {% endif %}
+
+    {% if refined %}
+    <div class="card refined">
+        <h2>🔁 Refined Output</h2>
+        <pre>{{ refined }}</pre>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
